@@ -1,6 +1,40 @@
-<html>
+<html ng-app="app">
 	<head>
 		<title>A.M building works</title>
 	</head>
-	<body></body>
+	<body>
+		<div class="titleSite">
+			My Site
+		</div>
+		<br>
+		<hr>
+		<div ng-controller="mainCtrl" >
+			<input class="form" placeholder="Enter mail..." ng-model="inputMail" />
+			<br>
+			<br>
+			<input class="form" placeholder="Enter password..." ng-model="inputPassword" />
+			<br>
+			<br>
+			<div ng-show="adminShow">
+
+			</div>
+			<div ng-show="!adminShow">
+
+			</div>
+			<button class="btn" ng-click="goToAdmin()">
+				Log in
+			</button>
+		</div>
+		<!--Angular-->
+		<script src="js/angular.js"></script>
+		<!--Config-->
+		<script src="app/config.js"></script>
+		<!--Controllers-->
+		<script src="app/controllers/mainCtrl.js"></script>
+		<!--Directives-->
+		<script src="app/directives/admin.js"></script>
+		<!--Css-->
+		<link href="css/style.css" rel="stylesheet"/>
+	</body>
 </html>
+
